@@ -1,0 +1,31 @@
+@use '../../lib/service.scss' as s;
+
+.page {
+	font-family: 'Roboto', sans-serif;
+	font-size: s.size();
+	background-color: s.color('background');
+}
+
+.section {
+	display: flex;
+	justify-content: center;
+}
+
+$contentSizeMap: (
+	desktop:1200px,
+	laptop:100px,
+	tablet:800px,
+	mobile:600px
+);
+
+.section__content {
+	max-width: 1200px;
+	width: 100%;
+
+	@each $key,
+	$value in s.$screenMap {
+		@media all and (width < $value) {
+			max-width: map-get($contentSizeMap, $key);
+		}
+	}
+}
