@@ -35,3 +35,21 @@ $contentSizeMap: (
 		grid-template-columns: 1fr;
 	}
 }
+
+.footer {
+	display: flex;
+	justify-content: center;
+}
+
+.section__footer {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+	@media all and (width < var.screen('laptop')) {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+
+	@media all and (width < var.screen('tablet')) {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}

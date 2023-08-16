@@ -40,4 +40,24 @@
   }
 }
 
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+.section__footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+@media all and (width < 1260px) {
+  .section__footer {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+@media all and (width < 1000px) {
+  .section__footer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 /*# sourceMappingURL=section.css.map */

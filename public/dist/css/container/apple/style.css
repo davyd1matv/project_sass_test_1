@@ -1,4 +1,4 @@
-.section, .header, .product {
+.section, .header, .header__bottom, .product {
   display: flex;
   justify-content: center;
   padding: 0 16px;
@@ -37,6 +37,26 @@
 @media all and (width < 1260px) {
   .section__double {
     grid-template-columns: 1fr;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+.section__footer, .footer__section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+@media all and (width < 1260px) {
+  .section__footer, .footer__section {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+@media all and (width < 1000px) {
+  .section__footer, .footer__section {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -81,6 +101,33 @@
 
 .header__linl {
   font-size: 12px;
+}
+
+.header__bottom {
+  display: flex;
+  background-color: #fff;
+}
+
+.header__title {
+  font-size: 16px;
+  color: #000;
+}
+
+.header__link-shop {
+  font-size: 16px;
+  color: #0066cc;
+  position: relative;
+  padding-right: 15px;
+}
+.header__link-shop::after {
+  display: block;
+  content: "";
+  width: 7px;
+  height: 12px;
+  background-image: url("/svg/arrowAction.svg");
+  position: absolute;
+  right: 0;
+  top: calc(50% - 7px);
 }
 
 .product {
@@ -151,7 +198,7 @@
 
 .product-small {
   max-height: 580px;
-  height: 50vh;
+  height: 100vh;
   background-size: cover;
 }
 @media all and (width < ) {
@@ -195,6 +242,11 @@
   background-color: #fafafa;
 }
 
+.product--watch {
+  background-image: url(/img/watch.png);
+  background-color: #000;
+}
+
 .product--trade-in {
   background-image: url(/img/trade-in.png);
   background-color: #fafafa;
@@ -202,6 +254,26 @@
 
 .product--conference {
   background-image: url(/img/conference.png);
+  background-color: #000;
+}
+
+.product--ipad {
+  background-image: url(/img/ipad.png);
+  background-color: #fafafa;
+}
+
+.product--business {
+  background-image: url(/img/business.png);
+  background-color: #000;
+}
+
+.product--gift {
+  background-image: url(/img/gift.png);
+  background-color: #fafafa;
+}
+
+.product--card {
+  background-image: url(/img/card.png);
   background-color: #fafafa;
 }
 
@@ -210,6 +282,34 @@
 }
 .product-small .product__description {
   font-size: 20px;
+}
+
+.footer {
+  min-height: 270px;
+  padding-top: 39px;
+  background-color: #f5f5f7;
+}
+
+.footer__section {
+  max-width: 1000px;
+  width: 100%;
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__title {
+  font-size: 12px;
+  font-weight: 600;
+  padding-bottom: 16px;
+}
+
+.footer__link {
+  font-size: 12px;
+  color: #000;
+  padding-bottom: 12px;
 }
 
 /*# sourceMappingURL=style.css.map */

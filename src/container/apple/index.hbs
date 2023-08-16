@@ -22,9 +22,23 @@
 				<img src="/svg/search.svg" alt="Apple" class="header__icon">
 				<img src="/svg/profile.svg" alt="Apple" class="header__icon">
 			</div>
+
 		</header>
 		{{/with}}
 
+	</div>
+
+	<div class="header__bottom">
+		{{#with header}}
+		<div class="header__content">
+			{{#with ad}}
+			<div class="header__title">{{title}}</div>
+			{{#with link}}
+			<a href="{{url}}" class="header__link-shop">{{text}}</a>
+			{{/with}}
+			{{/with}}
+		</div>
+		{{/with}}
 	</div>
 
 	{{#with iphone_pro}}
@@ -45,6 +59,22 @@
 
 	{{#with iphone}}
 	<section class="product product-big product--iphone product--light product--top">
+		<div class="product__content">
+			<h1 class="product__title">{{title}}</h1>
+			<p class="product__description">{{descriptions}}</p>
+			<div class="product__action">
+				{{#with link}}
+				{{#each text}}
+				<a href="{{../link}}" class="product__link">{{this}}</a>
+				{{/each}}
+				{{/with}}
+			</div>
+		</div>
+	</section>
+	{{/with}}
+
+	{{#with iwatch}}
+	<section class="product product-big product--watch product--dark product--top">
 		<div class="product__content">
 			<h1 class="product__title">{{title}}</h1>
 			<p class="product__description">{{descriptions}}</p>
@@ -90,6 +120,87 @@
 				</div>
 			</section>
 			{{/with}}
+		</div>
+
+		<div>
+			{{#with ipad}}
+			<section class="product product-small product--ipad product--lifht product--top">
+				<div class="product__content">
+					<h1 class="product__title">{{title}}</h1>
+					<p class="product__description">{{descriptions}}</p>
+					<div class="product__action">
+						{{#with link}}
+						{{#each text}}
+						<a href="{{../link}}" class="product__link">{{this}}</a>
+						{{/each}}
+						{{/with}}
+					</div>
+				</div>
+			</section>
+			{{/with}}
+		</div>
+
+		<div>
+			{{#with small_business}}
+			<section class="product product-small product--business product--dark product--top">
+				<div class="product__content">
+					<h1 class="product__title">{{title}}</h1>
+					<p class="product__description">{{descriptions}}</p>
+					<div class="product__action">
+						{{#with link}}
+						<a href="{{link}}" class="product__link">{{text}}</a>
+						{{/with}}
+					</div>
+				</div>
+			</section>
+			{{/with}}
+		</div>
+
+		<div>
+			{{#with gift}}
+			<section class="product product-small product--gift product--lifht product--top">
+				<div class="product__content">
+					<h1 class="product__title">{{title}}</h1>
+					<p class="product__description">{{descriptions}}</p>
+					<div class="product__action">
+						{{#with link}}
+						<a href="{{link}}" class="product__link">{{text}}</a>
+						{{/with}}
+					</div>
+				</div>
+			</section>
+			{{/with}}
+		</div>
+
+		<div>
+			{{#with card}}
+			<section class="product product-small product--card product--light product--top">
+				<div class="product__content">
+					<h1 class="product__title">{{title}}</h1>
+					<p class="product__description">{{descriptions}}</p>
+					<div class="product__action">
+						{{#with link}}
+						<a href="{{link}}" class="product__link">{{text}}</a>
+						{{/with}}
+					</div>
+				</div>
+			</section>
+			{{/with}}
+		</div>
+	</div>
+
+
+	<div class="footer">
+		<div class="footer__section">
+			{{#each footer}}
+			<div class="footer__content">
+				<h2 class="footer__title">{{title}}</h2>
+				{{#each links}}
+				<a href="{{url}}" class="footer__link">{{text}}</a>
+				{{/each}}
+			</div>
+
+			{{/each}}
 		</div>
 	</div>
 </div>
